@@ -3,6 +3,7 @@
 #include <stdio.h>
 
 //--------------------------------------------------------1
+//  for ( int i=n1; !(n1 % i ==0 && n2 % i ==0); i--);
 void task1(int n1, int n2) {
     int i;
     for (i = n1; !(n1 % i == 0 && n2 % i == 0); i--);
@@ -10,6 +11,7 @@ void task1(int n1, int n2) {
 }
 
 //--------------------------------------------------------2
+//  for ( int n=a; n%a!=0 || n%b!=0; n++);
 void task2(int a, int b) {
     int n;
     for (n = a; n % a != 0 || n % b != 0; n++);
@@ -17,6 +19,10 @@ void task2(int a, int b) {
 }
 
 //--------------------------------------------------------3
+//  for ( int n=2; n<a; n++)
+//      if (a % n == 0) break;
+//  if (n == a) return 1;
+//  return 0;
 void task3(int a) {
     // Находит минимальный делитель n для числа a
     int n;
@@ -27,8 +33,10 @@ void task3(int a) {
     printf("n = %d \n" ,n);
     return 0;
 }
-
 //--------------------------------------------------------4
+//  for (int n = 2; n < a && a % n != 0; n++);
+//  if (n == a) return 1;
+//  return 0;
 void task4(int a) {
     int n;
     for (n = 2; n < a && a % n != 0; n++);
@@ -37,7 +45,11 @@ void task4(int a) {
     return 0;
 }
 
-////--------------------------------------------------------5
+//--------------------------------------------------------5
+//  for (int s = 0, n = 2; n < a; n++)
+//      if (a % n == 0) s++;
+//  if (s == 0) return 1;
+//  return 0;
 void task5(int a) {
     int s; 
     int n;
